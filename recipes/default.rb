@@ -35,5 +35,5 @@ execute 'Unzip Database Source File' do
   cwd '/stage'
   user node['centroid_oracle_database']['os_user']
   group node['centroid_oracle_database']['os_group']
-  not_if { ::File.exist?("/stage/database/runInstaller.sh") }
+  not_if { ::File.exist?('/stage/database/runInstaller.sh') }
 end
